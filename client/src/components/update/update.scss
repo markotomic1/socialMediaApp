@@ -1,0 +1,73 @@
+@import "../../style.scss";
+
+.update {
+  @include themify($themes) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 45%;
+    height: 50%;
+    background-color: white;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: themed("bgSoft");
+    color: themed("textColor");
+
+    .container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+          cursor: pointer;
+          color: themed("textColorSoft");
+          font-size: 16px;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+
+          img {
+            width: 20px;
+          }
+        }
+        input {
+          color: themed("textColor");
+          background-color: transparent;
+          border: none;
+          outline: none;
+          padding: 10px 15px;
+          border: 1px solid themed("border");
+        }
+        button {
+          padding: 5px 10px;
+          cursor: pointer;
+          background-color: rgb(95, 95, 234);
+          border: none;
+          color: white;
+        }
+      }
+    }
+    .buttonDiv {
+      position: absolute;
+      top: 0;
+      right: 0;
+      button {
+        background-color: rgb(237, 79, 79);
+        color: white;
+        cursor: pointer;
+        border: none;
+        padding: 5px 10px;
+      }
+    }
+  }
+}

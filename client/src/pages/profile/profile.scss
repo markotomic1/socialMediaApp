@@ -58,7 +58,15 @@
         .left {
           flex: 1;
           display: flex;
-          gap: 10px;
+          gap: 20px;
+          .icons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            @include mobile {
+              display: none;
+            }
+          }
 
           @include tablet {
             flex-wrap: wrap;
